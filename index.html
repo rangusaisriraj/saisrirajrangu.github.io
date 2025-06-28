@@ -4,36 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sai Sri Raj Rangu | Data & Business Analyst Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Color Palette */
+        /* ====== Color & Typography Setup ====== */
         :root {
-            --bg-color: #f9fafb;
+            --bg-gradient-start: #f9fafb;
+            --bg-gradient-end: #e0e7ef;
             --card-color: #ffffff;
             --text-color: #333333;
-            --accent-color: #0f4c81;   /* Deep blue */
-            --accent-hover: #145DA0;
+            --accent-color: #0077b6;
+            --accent-hover: #005f99;
             --section-title: #222222;
-            --subtle-text: #666666;
+            --footer-bg: #111111;
+            --footer-text: #CCCCCC;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, var(--bg-gradient-start), var(--bg-gradient-end));
             color: var(--text-color);
+            line-height: 1.6;
         }
 
         header {
-            background-color: #0f4c81;
+            background-color: #111111;
             color: #ffffff;
             padding: 60px 20px;
             text-align: center;
         }
 
         header h1 {
-            font-size: 2.8em;
+            font-size: 3em;
             margin-bottom: 10px;
-            font-family: 'Courier New', Courier, monospace; /* Dev feel */
+            font-family: 'Courier New', Courier, monospace;
         }
 
         header p {
@@ -47,48 +55,54 @@
             padding: 0 20px;
         }
 
-        section {
-            margin-bottom: 60px;
-        }
-
         h2 {
             color: var(--section-title);
             border-bottom: 3px solid var(--accent-color);
             padding-bottom: 10px;
             margin-bottom: 25px;
-            font-size: 1.8em;
+            font-size: 2em;
             font-family: 'Courier New', Courier, monospace;
         }
 
         .card {
             background-color: var(--card-color);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            padding: 20px;
-            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+            padding: 25px;
+            margin-bottom: 25px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--accent-color);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-hover);
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         a {
             color: var(--accent-color);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: var(--accent-hover);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
         }
 
         ul {
@@ -97,29 +111,44 @@
 
         footer {
             text-align: center;
-            padding: 30px;
-            background-color: #0f4c81;
-            color: #ccc;
-            font-size: 0.9em;
+            padding: 40px 20px;
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            font-size: 0.95em;
         }
 
-        /* Mobile Responsive */
+        /* ====== Mobile Responsive ====== */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
             .container {
                 padding: 0 10px;
             }
         }
     </style>
+    <script>
+        // Scroll reveal animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+            document.querySelectorAll('.card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
 </head>
 <body>
 
 <header>
     <h1>Sai Sri Raj Rangu</h1>
     <p>Data & Business Analyst | SQL | Power BI | Tableau | AWS Quicksight | Excel</p>
-    <p>Email: <a href="mailto:rsaisriraj@gmail.com" style="color:#ADD8E6;">rsaisriraj@gmail.com</a> | Phone: +1 (313) 257-0796</p>
+    <p>Email: <a href="mailto:rsaisriraj@gmail.com" style="color:#4DB8FF;">rsaisriraj@gmail.com</a> | Phone: +1 (313) 257-0796</p>
     <a class="btn" href="https://drive.google.com/file/d/1JNGaLh_uXoo2EtoYcO2a-spvr_UfJLFh/view?usp=drive_link" target="_blank">📄 Download My Resume</a>
 </header>
 
@@ -139,10 +168,10 @@
         <div class="card">
             <p><strong>Product Compliance Associate</strong> - Amazon, Hyderabad (Nov 2019 – Dec 2023)</p>
             <ul>
-                <li>Data-driven decision-making and process improvement using SQL and Excel dashboards.</li>
-                <li>SME for compliance operations and training.</li>
-                <li>Cross-functional collaboration with business and tech teams.</li>
-                <li>Automated performance tracking reports and KPIs.</li>
+                <li>Led data analysis for business decisions and process improvements using SQL and Excel dashboards.</li>
+                <li>SME for compliance processes and operational training.</li>
+                <li>Collaborated with global cross-functional teams to deliver data-driven insights.</li>
+                <li>Automated KPI dashboards for performance tracking.</li>
             </ul>
         </div>
     </section>
@@ -152,13 +181,14 @@
 
         <div class="card">
             <p><strong><a href="https://github.com/rangusaisriraj/credit-card-spend-analysis" target="_blank">Credit Card Spend Analysis (SQL)</a></strong></p>
-            <p>SQL-based analysis exploring customer spending behaviors and KPIs for business strategy.</p>
+            <p>SQL-based analysis of customer spending patterns with key KPIs and business insights.</p>
         </div>
 
         <div class="card">
             <p><strong><a href="https://github.com/rangusaisriraj/Hotel_Booking_SQL_Project" target="_blank">Hotel Booking Analysis (SQL)</a></strong></p>
-            <p>Data-driven insights into booking patterns, revenue forecasting, and cancellation analysis.</p>
+            <p>Exploratory SQL project analyzing hotel booking trends, customer behavior, and revenue drivers.</p>
         </div>
+
     </section>
 
     <section>
@@ -185,7 +215,7 @@
 </div>
 
 <footer>
-    © 2025 Sai Sri Raj Rangu | Designed with 💻 & ☕
+    © 2025 Sai Sri Raj Rangu | Built with SQL, Power BI, Coffee ☕ & Late Nights 🌙
 </footer>
 
 </body>
