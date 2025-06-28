@@ -8,42 +8,76 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #FFFFFF;
+            color: #333333;
+            line-height: 1.6;
         }
         header {
-            background-color: #222;
-            color: #fff;
-            padding: 40px 20px;
+            background-color: #111111;
+            color: #FFFFFF;
+            padding: 60px 20px;
             text-align: center;
         }
-        section {
-            max-width: 900px;
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.8em;
+        }
+        header p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .container {
+            max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
         }
+        section {
+            margin-bottom: 50px;
+        }
         h2 {
-            color: #333;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
+            color: #222222;
+            border-bottom: 2px solid #dddddd;
+            padding-bottom: 8px;
             margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            background-color: #0077b6;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #023e8a;
         }
         a {
-            color: #007acc;
+            color: #0077b6;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
-        .project, .certification, .education, .experience {
-            margin-bottom: 30px;
+        ul {
+            padding-left: 20px;
         }
         footer {
             text-align: center;
             padding: 20px;
+            background-color: #111111;
+            color: #CCCCCC;
             font-size: 0.9em;
-            background-color: #222;
-            color: #fff;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .container {
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
@@ -51,63 +85,61 @@
 
 <header>
     <h1>Sai Sri Raj Rangu</h1>
-    <p>Data & Business Analyst | SQL | Power BI | Tableau | AWS Quicksight | Advanced Excel</p>
-    <p>Email: <a href="mailto:rsaisriraj@gmail.com" style="color: #4DB8FF;">rsaisriraj@gmail.com</a> | Phone: +1 (313) 257-0796</p>
-    <p><a href="https://drive.google.com/file/d/1JNGaLh_uXoo2EtoYcO2a-spvr_UfJLFh/view?usp=drive_link" target="https://drive.google.com/file/d/1JNGaLh_uXoo2EtoYcO2a-spvr_UfJLFh/view?usp=drive_link">📄 Download My Resume</a></p>
+    <p>Data & Business Analyst | SQL | Power BI | Tableau | AWS Quicksight | Excel</p>
+    <p>Email: <a href="mailto:rsaisriraj@gmail.com" style="color:#4DB8FF;">rsaisriraj@gmail.com</a> | Phone: +1 (313) 257-0796</p>
+    <a class="btn" href="https://drive.google.com/file/d/1JNGaLh_uXoo2EtoYcO2a-spvr_UfJLFh/view?usp=drive_link" target="_blank">📄 Download My Resume</a>
 </header>
 
-<section>
-    <h2>Education</h2>
-    <div class="education">
-        <strong>MS in Information Systems</strong> - Trine University, Detroit, MI (Dec 2025) | GPA: 3.5/4.0<br>
-        <strong>MBA in Business Analytics</strong> - Liverpool Business School, London, UK (Dec 2023) | GPA: 3.5/4.0<br>
-        <strong>B.Tech in Computer Science Engineering</strong> - CMR Technical Campus, Hyderabad, India (Jun 2018) | GPA: 3.45/4.0
-    </div>
-</section>
+<div class="container">
 
-<section>
-    <h2>Work Experience</h2>
-    <div class="experience">
-        <strong>Product Compliance Associate</strong> - Amazon, Hyderabad, India (Nov 2019 – Dec 2023)<br>
-        Responsibilities:<br>
-        • Led data analysis and reporting for process improvement.<br>
-        • Served as Subject Matter Expert (SME) for compliance and operational training.<br>
-        • Collaborated cross-functionally to deliver business insights.<br>
-        • Automated Excel dashboards for performance tracking.
-    </div>
-</section>
+    <section>
+        <h2>Education</h2>
+        <p><strong>MS in Information Systems</strong> - Trine University, Detroit, MI (Dec 2025) | GPA: 3.5/4.0</p>
+        <p><strong>MBA in Business Analytics</strong> - Liverpool Business School, London, UK (Dec 2023) | GPA: 3.5/4.0</p>
+        <p><strong>B.Tech in Computer Science Engineering</strong> - CMR Technical Campus, Hyderabad, India (Jun 2018) | GPA: 3.45/4.0</p>
+    </section>
 
-<section>
-    <h2>Projects</h2>
-    <div class="project">
-        <strong><a href="https://github.com/rangusaisriraj/credit-card-spend-analysis" target="_blank">Credit Card Spend Analysis (SQL)</a></strong><br>
-        SQL-based data analysis on customer spend patterns and business KPIs.
-    </div>
-    <div class="project">
-        <strong><a href="https://github.com/rangusaisriraj/Hotel_Booking_SQL_Project" target="_blank">Hotel Booking Analysis (SQL)</a></strong><br>
-        Exploratory SQL analysis on hotel bookings, customer behavior, and revenue trends.
-    </div>
-</section>
+    <section>
+        <h2>Work Experience</h2>
+        <p><strong>Product Compliance Associate</strong> - Amazon, Hyderabad, India (Nov 2019 – Dec 2023)</p>
+        <ul>
+            <li>Led data analysis for business decision-making and process improvements.</li>
+            <li>Served as Subject Matter Expert (SME) in compliance and operational training.</li>
+            <li>Collaborated cross-functionally to deliver actionable business insights.</li>
+            <li>Automated Excel dashboards to track team performance and productivity metrics.</li>
+        </ul>
+    </section>
 
-<section>
-    <h2>Certifications</h2>
-    <div class="certification">
-        • Power BI Data Analyst Associate - Microsoft<br>
-        • SQL for Data Science - Coursera<br>
-        • Data Visualization with Tableau - Udemy
-    </div>
-</section>
+    <section>
+        <h2>Projects</h2>
+        <p><strong><a href="https://github.com/rangusaisriraj/credit-card-spend-analysis" target="_blank">Credit Card Spend Analysis (SQL)</a></strong><br>
+        SQL-based analysis of customer spending patterns with KPI-focused reporting.</p>
 
-<section>
-    <h2>Contact</h2>
-    <p>📧 Email: <a href="mailto:rsaisriraj@gmail.com">rsaisriraj@gmail.com</a></p>
-    <p>📱 Phone: +1 (313) 257-0796</p>
-    <p>🌐 GitHub: <a href="https://github.com/rangusaisriraj" target="_blank">github.com/rangusaisriraj</a></p>
-    <p>🔗 LinkedIn: <a href="#" target="_blank">[Add your LinkedIn link here]</a></p>
-</section>
+        <p><strong><a href="https://github.com/rangusaisriraj/Hotel_Booking_SQL_Project" target="_blank">Hotel Booking Analysis (SQL)</a></strong><br>
+        Exploratory SQL project analyzing hotel booking trends, customer behavior, and revenue drivers.</p>
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+        <ul>
+            <li>Power BI Data Analyst Associate - Microsoft</li>
+            <li>SQL for Data Science - Coursera</li>
+            <li>Data Visualization with Tableau - Udemy</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:rsaisriraj@gmail.com">rsaisriraj@gmail.com</a></p>
+        <p>Phone: +1 (313) 257-0796</p>
+        <p>GitHub: <a href="https://github.com/rangusaisriraj" target="_blank">github.com/rangusaisriraj</a></p>
+        <p>LinkedIn: <a href="#" target="_blank">[Add Your LinkedIn URL]</a></p>
+    </section>
+
+</div>
 
 <footer>
-    © 2025 Sai Sri Raj Rangu | Portfolio Website
+    © 2025 Sai Sri Raj Rangu | All Rights Reserved
 </footer>
 
 </body>
