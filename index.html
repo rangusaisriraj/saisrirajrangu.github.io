@@ -5,73 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sai Sri Raj Rangu | Data & Business Analyst Portfolio</title>
     <style>
+        /* Color Palette */
+        :root {
+            --bg-color: #f9fafb;
+            --card-color: #ffffff;
+            --text-color: #333333;
+            --accent-color: #0f4c81;   /* Deep blue */
+            --accent-hover: #145DA0;
+            --section-title: #222222;
+            --subtle-text: #666666;
+        }
+
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #FFFFFF;
-            color: #333333;
-            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
+
         header {
-            background-color: #111111;
-            color: #FFFFFF;
+            background-color: #0f4c81;
+            color: #ffffff;
             padding: 60px 20px;
             text-align: center;
         }
+
         header h1 {
-            margin-bottom: 10px;
             font-size: 2.8em;
+            margin-bottom: 10px;
+            font-family: 'Courier New', Courier, monospace; /* Dev feel */
         }
+
         header p {
             margin: 5px 0;
             font-size: 1.1em;
         }
+
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
         }
+
         section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
+
         h2 {
-            color: #222222;
-            border-bottom: 2px solid #dddddd;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
+            color: var(--section-title);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
             font-size: 1.8em;
+            font-family: 'Courier New', Courier, monospace;
         }
+
+        .card {
+            background-color: var(--card-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
         .btn {
             display: inline-block;
-            padding: 10px 18px;
-            background-color: #0077b6;
-            color: #ffffff;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 10px;
             transition: background-color 0.3s ease;
         }
+
         .btn:hover {
-            background-color: #023e8a;
+            background-color: var(--accent-hover);
         }
+
         a {
-            color: #0077b6;
+            color: var(--accent-color);
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         ul {
             padding-left: 20px;
         }
+
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #111111;
-            color: #CCCCCC;
+            padding: 30px;
+            background-color: #0f4c81;
+            color: #ccc;
             font-size: 0.9em;
         }
-        @media (max-width: 600px) {
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
             header h1 {
                 font-size: 2em;
             }
@@ -86,60 +119,73 @@
 <header>
     <h1>Sai Sri Raj Rangu</h1>
     <p>Data & Business Analyst | SQL | Power BI | Tableau | AWS Quicksight | Excel</p>
-    <p>Email: <a href="mailto:rsaisriraj@gmail.com" style="color:#4DB8FF;">rsaisriraj@gmail.com</a> | Phone: +1 (313) 257-0796</p>
+    <p>Email: <a href="mailto:rsaisriraj@gmail.com" style="color:#ADD8E6;">rsaisriraj@gmail.com</a> | Phone: +1 (313) 257-0796</p>
     <a class="btn" href="https://drive.google.com/file/d/1JNGaLh_uXoo2EtoYcO2a-spvr_UfJLFh/view?usp=drive_link" target="_blank">📄 Download My Resume</a>
 </header>
 
 <div class="container">
 
     <section>
-        <h2>Education</h2>
-        <p><strong>MS in Information Systems</strong> - Trine University, Detroit, MI (Dec 2025) | GPA: 3.5/4.0</p>
-        <p><strong>MBA in Business Analytics</strong> - Liverpool Business School, London, UK (Dec 2023) | GPA: 3.5/4.0</p>
-        <p><strong>B.Tech in Computer Science Engineering</strong> - CMR Technical Campus, Hyderabad, India (Jun 2018) | GPA: 3.45/4.0</p>
+        <h2>🎓 Education</h2>
+        <div class="card">
+            <p><strong>MS in Information Systems</strong> - Trine University, Detroit, MI (Dec 2025) | GPA: 3.5/4.0</p>
+            <p><strong>MBA in Business Analytics</strong> - Liverpool Business School, UK (Dec 2023) | GPA: 3.5/4.0</p>
+            <p><strong>B.Tech in Computer Science Engineering</strong> - CMR Technical Campus, India (Jun 2018) | GPA: 3.45/4.0</p>
+        </div>
     </section>
 
     <section>
-        <h2>Work Experience</h2>
-        <p><strong>Product Compliance Associate</strong> - Amazon, Hyderabad, India (Nov 2019 – Dec 2023)</p>
-        <ul>
-            <li>Led data analysis for business decision-making and process improvements.</li>
-            <li>Served as Subject Matter Expert (SME) in compliance and operational training.</li>
-            <li>Collaborated cross-functionally to deliver actionable business insights.</li>
-            <li>Automated Excel dashboards to track team performance and productivity metrics.</li>
-        </ul>
+        <h2>💼 Work Experience</h2>
+        <div class="card">
+            <p><strong>Product Compliance Associate</strong> - Amazon, Hyderabad (Nov 2019 – Dec 2023)</p>
+            <ul>
+                <li>Data-driven decision-making and process improvement using SQL and Excel dashboards.</li>
+                <li>SME for compliance operations and training.</li>
+                <li>Cross-functional collaboration with business and tech teams.</li>
+                <li>Automated performance tracking reports and KPIs.</li>
+            </ul>
+        </div>
     </section>
 
     <section>
-        <h2>Projects</h2>
-        <p><strong><a href="https://github.com/rangusaisriraj/credit-card-spend-analysis" target="_blank">Credit Card Spend Analysis (SQL)</a></strong><br>
-        SQL-based analysis of customer spending patterns with KPI-focused reporting.</p>
+        <h2>📊 Projects</h2>
 
-        <p><strong><a href="https://github.com/rangusaisriraj/Hotel_Booking_SQL_Project" target="_blank">Hotel Booking Analysis (SQL)</a></strong><br>
-        Exploratory SQL project analyzing hotel booking trends, customer behavior, and revenue drivers.</p>
+        <div class="card">
+            <p><strong><a href="https://github.com/rangusaisriraj/credit-card-spend-analysis" target="_blank">Credit Card Spend Analysis (SQL)</a></strong></p>
+            <p>SQL-based analysis exploring customer spending behaviors and KPIs for business strategy.</p>
+        </div>
+
+        <div class="card">
+            <p><strong><a href="https://github.com/rangusaisriraj/Hotel_Booking_SQL_Project" target="_blank">Hotel Booking Analysis (SQL)</a></strong></p>
+            <p>Data-driven insights into booking patterns, revenue forecasting, and cancellation analysis.</p>
+        </div>
     </section>
 
     <section>
-        <h2>Certifications</h2>
-        <ul>
-            <li>Power BI Data Analyst Associate - Microsoft</li>
-            <li>SQL for Data Science - Coursera</li>
-            <li>Data Visualization with Tableau - Udemy</li>
-        </ul>
+        <h2>🎖️ Certifications</h2>
+        <div class="card">
+            <ul>
+                <li>Power BI Data Analyst Associate - Microsoft</li>
+                <li>SQL for Data Science - Coursera</li>
+                <li>Data Visualization with Tableau - Udemy</li>
+            </ul>
+        </div>
     </section>
 
     <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:rsaisriraj@gmail.com">rsaisriraj@gmail.com</a></p>
-        <p>Phone: +1 (313) 257-0796</p>
-        <p>GitHub: <a href="https://github.com/rangusaisriraj" target="_blank">github.com/rangusaisriraj</a></p>
-        <p>LinkedIn: <a href="#" target="_blank">[Add Your LinkedIn URL]</a></p>
+        <h2>📬 Contact</h2>
+        <div class="card">
+            <p>Email: <a href="mailto:rsaisriraj@gmail.com">rsaisriraj@gmail.com</a></p>
+            <p>Phone: +1 (313) 257-0796</p>
+            <p>GitHub: <a href="https://github.com/rangusaisriraj" target="_blank">github.com/rangusaisriraj</a></p>
+            <p>LinkedIn: <a href="#" target="_blank">[Add Your LinkedIn URL]</a></p>
+        </div>
     </section>
 
 </div>
 
 <footer>
-    © 2025 Sai Sri Raj Rangu | All Rights Reserved
+    © 2025 Sai Sri Raj Rangu | Designed with 💻 & ☕
 </footer>
 
 </body>
