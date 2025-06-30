@@ -36,7 +36,6 @@
             background-color: #111111;
             color: #ffffff;
             padding: 40px 20px;
-            text-align: center;
         }
 
         .header-content {
@@ -81,7 +80,7 @@
             font-size: 1.1em;
         }
 
-        /* ====== Sticky Navbar ====== */
+        /* ====== Improved Sticky Navbar Styling ====== */
         .navbar {
             position: sticky;
             top: 0;
@@ -98,11 +97,16 @@
             text-decoration: none;
             color: var(--text-color);
             font-weight: 600;
-            transition: color 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
         }
 
         .navbar a:hover {
-            color: var(--accent-color);
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: underline;
         }
 
         .container {
@@ -187,8 +191,8 @@
             }
             .navbar {
                 flex-wrap: wrap;
-                gap: 15px;
-                padding: 10px;
+                gap: 10px;
+                padding: 8px;
             }
         }
     </style>
