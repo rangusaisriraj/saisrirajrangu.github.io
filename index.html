@@ -6,7 +6,6 @@
     <title>Sai Sri Raj Rangu | Data & Business Analyst Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ====== Color & Typography Setup ====== */
         :root {
             --bg-gradient-start: #f9fafb;
             --bg-gradient-end: #e0e7ef;
@@ -35,7 +34,9 @@
         header {
             background-color: #111111;
             color: #ffffff;
-            padding: 40px 20px;
+            padding: 40px 20px 20px 20px;
+            border-bottom: 4px solid var(--accent-color);
+            position: relative;
         }
 
         .header-content {
@@ -46,14 +47,36 @@
             gap: 30px;
             max-width: 1100px;
             margin: 0 auto;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to bottom, rgba(17, 17, 17, 1), rgba(17, 17, 17, 0));
         }
 
         .profile-image img {
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease, filter 0.3s ease;
             filter: grayscale(10%) brightness(1.05);
         }
@@ -67,6 +90,13 @@
             flex: 1;
             min-width: 250px;
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .profile-info p {
+            margin: 8px 0;
         }
 
         header h1 {
@@ -75,12 +105,6 @@
             font-family: 'Courier New', Courier, monospace;
         }
 
-        header p {
-            margin: 5px 0;
-            font-size: 1.1em;
-        }
-
-        /* ====== Improved Sticky Navbar Styling ====== */
         .navbar {
             position: sticky;
             top: 0;
@@ -177,7 +201,6 @@
             font-size: 0.95em;
         }
 
-        /* ====== Mobile Responsive ====== */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -197,7 +220,6 @@
         }
     </style>
     <script>
-        // Scroll reveal animation
         document.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
