@@ -89,20 +89,28 @@
         .profile-info {
             flex: 1;
             min-width: 250px;
-            text-align: left;
+            max-width: 600px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            gap: 10px;
+        }
+
+        .profile-info h1 {
+            margin: 0;
+            font-size: 2.8em;
+            line-height: 1.2;
         }
 
         .profile-info p {
-            margin: 8px 0;
+            margin: 4px 0;
+            font-size: 1.1em;
         }
 
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-family: 'Courier New', Courier, monospace;
+        .profile-info .btn {
+            align-self: flex-start;
         }
 
         .navbar {
@@ -181,7 +189,7 @@
             color: #ffffff;
             border-radius: 6px;
             text-decoration: none;
-            margin-top: 20px;
+            margin-top: 10px;
             transition: background-color 0.3s ease;
         }
 
@@ -207,7 +215,11 @@
                 text-align: center;
             }
             .profile-info {
+                align-items: center;
                 text-align: center;
+            }
+            .profile-info .btn {
+                align-self: center;
             }
             header h1 {
                 font-size: 2em;
@@ -299,9 +311,10 @@
         <h2>🎖️ Certifications</h2>
         <div class="card">
             <ul>
-                <li>Power BI Data Analyst Associate - Microsoft</li>
-                <li>SQL for Data Science - Coursera</li>
-                <li>Data Visualization with Tableau - Udemy</li>
+                <li>Google Data Analytics Certification by Google</li>
+                <li>Data Science & Data Analyst Certification by IBM</li>
+                <li>AWS Solutions Architect Certification by Amazon Web Services</li>
+                <li>Microsoft Technology Associate by Microsoft</li>
             </ul>
         </div>
     </section>
