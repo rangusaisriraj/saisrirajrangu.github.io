@@ -35,12 +35,43 @@
         header {
             background-color: #111111;
             color: #ffffff;
-            padding: 60px 20px;
+            padding: 40px 20px;
             text-align: center;
         }
 
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .profile-image img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: grayscale(10%) brightness(1.05);
+        }
+
+        .profile-image img:hover {
+            transform: scale(1.05);
+            filter: none;
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+        }
+
         header h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 10px;
             font-family: 'Courier New', Courier, monospace;
         }
@@ -144,11 +175,15 @@
 
         /* ====== Mobile Responsive ====== */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.2em;
+            .header-content {
+                flex-direction: column;
+                text-align: center;
             }
-            .container {
-                padding: 0 10px;
+            .profile-info {
+                text-align: center;
+            }
+            header h1 {
+                font-size: 2em;
             }
             .navbar {
                 flex-wrap: wrap;
@@ -176,10 +211,17 @@
 <body>
 
 <header>
-    <h1>Sai Sri Raj Rangu</h1>
-    <p>Data & Business Analyst | SQL | Power BI | Tableau | AWS Quicksight | Excel</p>
-    <p>Email: <a href="mailto:rsaisriraj@gmail.com" style="color:#4DB8FF;">rsaisriraj@gmail.com</a> | Phone: +1 (313) 257-0796</p>
-    <a class="btn" href="https://drive.google.com/file/d/1JNGaLh_uXoo2EtoYcO2a-spvr_UfJLFh/view?usp=drive_link" target="_blank">📄 Download My Resume</a>
+    <div class="header-content">
+        <div class="profile-image">
+            <img src="images/profile.jpg" alt="Sai Sri Raj Rangu">
+        </div>
+        <div class="profile-info">
+            <h1>Sai Sri Raj Rangu</h1>
+            <p>Data & Business Analyst | SQL | Power BI | Tableau | AWS Quicksight | Excel</p>
+            <p>Email: <a href="mailto:rsaisriraj@gmail.com" style="color:#4DB8FF;">rsaisriraj@gmail.com</a> | Phone: +1 (313) 257-0796</p>
+            <a class="btn" href="https://drive.google.com/file/d/1JNGaLh_uXoo2EtoYcO2a-spvr_UfJLFh/view?usp=drive_link" target="_blank">📄 Download My Resume</a>
+        </div>
+    </div>
 </header>
 
 <nav class="navbar">
@@ -216,7 +258,6 @@
 
     <section id="projects">
         <h2>📊 Projects</h2>
-
         <div class="card">
             <p><strong><a href="https://github.com/rangusaisriraj/credit-card-spend-analysis" target="_blank">Credit Card Spend Analysis (SQL)</a></strong></p>
             <p>SQL-based analysis of customer spending patterns with key KPIs and business insights.</p>
@@ -226,7 +267,6 @@
             <p><strong><a href="https://github.com/rangusaisriraj/Hotel_Booking_SQL_Project" target="_blank">Hotel Booking Analysis (SQL)</a></strong></p>
             <p>Exploratory SQL project analyzing hotel booking trends, customer behavior, and revenue drivers.</p>
         </div>
-
     </section>
 
     <section id="certifications">
