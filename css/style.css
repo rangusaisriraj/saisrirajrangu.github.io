@@ -8,8 +8,6 @@
     --section-title: #222222;
     --footer-bg: #111111;
     --footer-text: #CCCCCC;
-    --amazon-orange: #FF9900;
-    --amazon-orange-hover: #e68a00;
 }
 
 html {
@@ -230,50 +228,46 @@ footer {
     transform: scale(1.05);
 }
 
-/* Amazon Gallery Section (Index Page Link Block) */
-#amazon-gallery {
+/* Amazon Extras (Gallery + Awards side by side) */
+#amazon-extras {
     margin-top: 40px;
-    padding: 20px;
-    background-color: var(--card-color);
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
 }
 
-#amazon-gallery h3 {
-    font-size: 1.6em;
-    color: var(--amazon-orange);
+.amazon-extras-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.amazon-extras-card {
+    flex: 1 1 45%;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.amazon-extras-card h3 {
+    font-size: 1.5em;
+    color: var(--section-title);
     margin-bottom: 10px;
 }
 
-.amazon-gallery-preview p {
+.amazon-extras-card p {
     font-size: 1.1em;
     margin-bottom: 10px;
 }
 
-.amazon-gallery-preview ul {
+.amazon-extras-card ul {
     padding-left: 20px;
     margin-bottom: 15px;
 }
 
-.amazon-gallery-preview ul li {
+.amazon-extras-card ul li {
     margin-bottom: 6px;
 }
 
-.amazon-gallery-preview .btn {
-    background-color: var(--amazon-orange);
-    color: white;
-    text-decoration: none;
-    padding: 10px 18px;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.amazon-gallery-preview .btn:hover {
-    background-color: var(--amazon-orange-hover);
-}
-
-/* Gallery Grid for amazon-gallery.html */
+/* Gallery Grid (for gallery.html and awards.html) */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -325,8 +319,6 @@ footer {
         gap: 10px;
         padding: 8px;
     }
-
-    /* Responsive for Experience Section */
     .experience-container {
         flex-direction: column;
         align-items: flex-start;
@@ -340,8 +332,10 @@ footer {
         width: 150px;
         height: 150px;
     }
-
     .gallery-videos {
+        flex-direction: column;
+    }
+    .amazon-extras-container {
         flex-direction: column;
     }
 }
