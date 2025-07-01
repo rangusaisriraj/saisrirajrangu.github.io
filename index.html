@@ -24,76 +24,126 @@
 </header>
 
 <nav class="navbar">
-    <a href="index.html">🏠 Home</a>
-    <a href="education.html">Education</a>
-    <a href="experience.html">Experience</a>
-    <a href="projects.html">Projects</a>
-    <a href="certifications.html">Certifications</a>
-    <a href="contact.html">Contact</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <div class="container">
 
-    <section id="overview">
-        <h2>🌟 Welcome to My Portfolio</h2>
-        <p>Explore my professional journey, skills, projects, certifications, and memorable experiences from Amazon and beyond.</p>
-    </section>
-
-    <section id="quick-links">
-        <h2>🔗 Quick Access</h2>
-
-        <div class="amazon-extras-container">
-
-            <div class="amazon-extras-card">
-                <h3>🎓 Education</h3>
-                <p>View my academic background and degrees.</p>
-                <a class="btn" href="education.html">👉 View Education</a>
-            </div>
-
-            <div class="amazon-extras-card">
-                <h3>💼 Experience</h3>
-                <p>Check out my work experience and roles.</p>
-                <a class="btn" href="experience.html">👉 View Experience</a>
-            </div>
-
-            <div class="amazon-extras-card">
-                <h3>📊 Projects</h3>
-                <p>Explore my SQL, Power BI, and data analysis projects.</p>
-                <a class="btn" href="projects.html">👉 View Projects</a>
-            </div>
-
-            <div class="amazon-extras-card">
-                <h3>🎖️ Certifications</h3>
-                <p>See my technical certifications from AWS, Microsoft, and more.</p>
-                <a class="btn" href="certifications.html">👉 View Certifications</a>
-            </div>
-
-            <div class="amazon-extras-card">
-                <h3>📬 Contact</h3>
-                <p>Get in touch with me.</p>
-                <a class="btn" href="contact.html">👉 Contact Me</a>
-            </div>
-
+    <section id="education">
+        <h2>🎓 Education</h2>
+        <div class="card">
+            <p><strong>MS in Information Systems</strong> - Trine University, Detroit, MI (Dec 2025) | GPA: 3.5/4.0</p>
+            <p><strong>MBA in Business Analytics</strong> - Liverpool Business School, UK (Dec 2023) | GPA: 3.5/4.0</p>
+            <p><strong>B.Tech in Computer Science Engineering</strong> - CMR Technical Campus, India (Jun 2018) | GPA: 3.45/4.0</p>
         </div>
     </section>
 
-    <section id="amazon-portfolio">
-        <h2>🚀 Amazon Portfolio</h2>
+    <section id="experience">
+        <h2>💼 Work Experience</h2>
+        <div class="experience-container">
 
-        <div class="amazon-extras-container">
-
-            <div class="amazon-extras-card">
-                <h3>📸 Amazon Gallery</h3>
-                <p>Memories, team photos, and moments from Amazon.</p>
-                <a class="btn" href="amazon-gallery.html" target="_blank">👉 View Gallery</a>
+            <div class="experience-details">
+                <div class="card">
+                    <p><strong>Product Compliance Associate</strong> - Amazon, Hyderabad (Nov 2019 – Dec 2023)</p>
+                    <ul>
+                        <li>Led data analysis for business decisions and process improvements using SQL and Excel dashboards.</li>
+                        <li>SME for compliance processes and operational training.</li>
+                        <li>Collaborated with global cross-functional teams to deliver data-driven insights.</li>
+                        <li>Automated KPI dashboards for performance tracking.</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="amazon-extras-card">
-                <h3>🏅 Amazon Awards</h3>
-                <p>Recognitions and awards I received at Amazon.</p>
-                <a class="btn" href="amazon-awards.html" target="_blank">👉 View Awards</a>
+            <div class="experience-image">
+                <img src="images/amazon_profile_picture.jpg" alt="Amazon Profile Picture">
             </div>
 
+        </div>
+
+        <!-- Amazon Extras Section (Gallery + Awards side by side) -->
+        <section id="amazon-extras">
+            <div class="amazon-extras-container">
+
+                <!-- Amazon Gallery Block -->
+                <div class="amazon-extras-card">
+                    <h3>📸 Amazon Gallery</h3>
+                    <p>Relive some amazing moments from my time at Amazon!</p>
+                    <ul>
+                        <li>🤝 Team Meetings</li>
+                        <li>🎉 Amazon Memories</li>
+                        <li>🎥 Video Moments</li>
+                    </ul>
+                    <a class="btn amazon-btn" href="amazon-gallery.html" target="_blank">👉 Click here to view Amazon Moments</a>
+                </div>
+
+                <!-- Amazon Awards Block -->
+                <div class="amazon-extras-card">
+                    <h3>🏅 Amazon Awards</h3>
+                    <p>A showcase of awards and recognitions I received at Amazon!</p>
+                    <ul>
+                        <li>🌟 Star Performer</li>
+                        <li>🏆 Best Team Player</li>
+                        <li>🎖️ Innovation Champion</li>
+                    </ul>
+                    <a class="btn amazon-btn" href="amazon-awards.html" target="_blank">👉 Click here to view Amazon Awards</a>
+                </div>
+
+            </div>
+        </section>
+
+    </section>
+
+    <section id="projects">
+        <h2>📊 Projects</h2>
+        <div class="card">
+            <p><strong><a href="https://github.com/rangusaisriraj/credit-card-spend-analysis" target="_blank">Credit Card Spend Analysis (SQL)</a></strong></p>
+            <p>SQL-based analysis of customer spending patterns with key KPIs and business insights.</p>
+        </div>
+
+        <div class="card">
+            <p><strong><a href="https://github.com/rangusaisriraj/Hotel_Booking_SQL_Project" target="_blank">Hotel Booking Analysis (SQL)</a></strong></p>
+            <p>Exploratory SQL project analyzing hotel booking trends, customer behavior, and revenue drivers.</p>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>🎖️ Certifications</h2>
+        <p><em>Click on each certification to view the certificate.</em></p>
+        <div class="card">
+            <ul>
+                <li>
+                    <a href="images/certificates/aws-certificate.png" target="_blank">AWS Certificate</a>
+                </li>
+                <li>
+                    <a href="images/certificates/aws-sme.pdf" target="_blank">AWS SME Certification</a>
+                </li>
+                <li>
+                    <a href="images/certificates/microsoft-certification.jpg" target="_blank">Microsoft Technology Certification</a>
+                </li>
+                <li>
+                    <a href="images/certificates/sql-by-amazon.pdf" target="_blank">SQL Certification by Amazon</a>
+                </li>
+                <li>
+                    <a href="images/certificates/sql-data-reporting-analysis.pdf" target="_blank">SQL Data Reporting and Analysis Certification</a>
+                </li>
+                <li>
+                    <a href="images/certificates/tableau-university-california.pdf" target="_blank">Tableau Certification by University of California</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>📬 Contact</h2>
+        <div class="card">
+            <p>Email: <a href="mailto:rsaisriraj@gmail.com">rsaisriraj@gmail.com</a></p>
+            <p>Phone: +1 (313) 257-0796</p>
+            <p>GitHub: <a href="https://github.com/rangusaisriraj" target="_blank">github.com/rangusaisriraj</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/saisrirajrangu/" target="_blank">linkedin.com/in/saisrirajrangu/</a></p>
         </div>
     </section>
 
