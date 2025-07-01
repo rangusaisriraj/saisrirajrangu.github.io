@@ -299,6 +299,18 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* ✅ NEW: YouTube Section Style */
+#youtube h2 {
+    color: var(--section-title);
+    margin-bottom: 15px;
+}
+
+#youtube .card ul li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+    padding-left: 5px;
+}
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
