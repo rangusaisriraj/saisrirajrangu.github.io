@@ -1,172 +1,353 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Sri Raj Rangu | Data & Business Analyst Portfolio</title>
+:root {
+    --bg-gradient-start: #f9fafb;
+    --bg-gradient-end: #e0e7ef;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #0077b6;
+    --accent-hover: #005f99;
+    --section-title: #222222;
+    --footer-bg: #111111;
+    --footer-text: #CCCCCC;
+}
 
-    <!-- ✅ SEO Meta Tags -->
-    <meta name="description" content="Sai Sri Raj Rangu - Data & Business Analyst Portfolio specializing in SQL, Power BI, Tableau, and AWS Quicksight. Amazon Alumni.">
-    <meta name="keywords" content="Sai Sri Raj Rangu, Data Analyst, Business Analyst, SQL, Power BI, Amazon, Tableau, AWS Quicksight, Portfolio">
-    <meta name="author" content="Sai Sri Raj Rangu">
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
 
-    <!-- ✅ Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom right, var(--bg-gradient-start), var(--bg-gradient-end));
+    color: var(--text-color);
+    line-height: 1.6;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+header {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 40px 20px 20px 20px;
+    border-bottom: 4px solid var(--accent-color);
+    position: relative;
+}
 
-<header>
-    <div class="header-content">
-        <div class="profile-image">
-            <img src="images/profile.jpg" alt="Sai Sri Raj Rangu">
-        </div>
-        <div class="profile-info">
-            <h1>Sai Sri Raj Rangu</h1>
-            <p>Data & Business Analyst | SQL | Power BI | Tableau | AWS Quicksight | Excel</p>
-            <p>Email: <a href="mailto:rangusaisriraj@gmail.com" style="color:#4DB8FF;">rangusaisriraj@gmail.com</a> | Phone: +1 (313) 257-0796</p>
-            <a class="btn" href="https://drive.google.com/file/d/1JNGaLh_uXoo2EtoYcO2a-spvr_UfJLFh/view?usp=drive_link" target="_blank">📄 Download My Resume</a>
-        </div>
-    </div>
-</header>
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-out;
+}
 
-<nav class="navbar">
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#education">Education</a>
-    <a href="#youtube">YouTube</a>
-    <a href="#contact">Contact</a>
-</nav>
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
 
-<div class="container">
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(17, 17, 17, 1), rgba(17, 17, 17, 0));
+}
 
-    <section id="experience">
-        <h2>💼 Work Experience</h2>
-        <div class="experience-container">
-            <div class="experience-details">
-                <div class="card">
-                    <p><strong>Product Compliance Associate</strong> - Amazon, Hyderabad (Nov 2019 – Dec 2023)</p>
-                    <ul>
-                        <li>Led data analysis for business decisions and process improvements using SQL and Excel dashboards.</li>
-                        <li>SME for compliance processes and operational training.</li>
-                        <li>Collaborated with global cross-functional teams to deliver data-driven insights.</li>
-                        <li>Automated KPI dashboards for performance tracking.</li>
-                    </ul>
-                </div>
-            </div>
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(10%) brightness(1.05);
+}
 
-            <div class="experience-image">
-                <img src="images/amazon_profile_picture.jpg" alt="Amazon Profile Picture">
-            </div>
-        </div>
+.profile-image img:hover {
+    transform: scale(1.05);
+    filter: none;
+}
 
-        <section id="amazon-extras">
-            <div class="amazon-extras-container">
-                <div class="amazon-extras-card">
-                    <h3>📸 Amazon Gallery</h3>
-                    <p>Relive some amazing moments from my time at Amazon!</p>
-                    <ul>
-                        <li>🤝 Team Meetings</li>
-                        <li>🎉 Amazon Memories</li>
-                        <li>🎥 Video Moments</li>
-                    </ul>
-                    <a class="btn amazon-btn" href="amazon-gallery.html" target="_blank">👉 Click here to view Amazon Moments</a>
-                </div>
+.profile-info {
+    flex: 1;
+    min-width: 250px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+}
 
-                <div class="amazon-extras-card">
-                    <h3>🏅 Amazon Awards</h3>
-                    <p>A showcase of awards and recognitions I received at Amazon!</p>
-                    <ul>
-                        <li>🌟 Star Performer</li>
-                        <li>🏆 Best Team Player</li>
-                        <li>🎖️ Innovation Champion</li>
-                    </ul>
-                    <a class="btn amazon-btn" href="amazon-awards.html" target="_blank">👉 Click here to view Amazon Awards</a>
-                </div>
-            </div>
-        </section>
-    </section>
+.profile-info h1 {
+    margin: 0;
+    font-size: 2.8em;
+    line-height: 1.2;
+}
 
-    <section id="projects">
-        <h2>📊 Projects</h2>
-        <div class="card">
-            <p><strong><a href="https://github.com/rangusaisriraj/credit-card-spend-analysis" target="_blank">Credit Card Spend Analysis (SQL)</a></strong></p>
-            <p>SQL-based analysis of customer spending patterns with key KPIs and business insights.</p>
-        </div>
+.profile-info p {
+    margin: 4px 0;
+    font-size: 1.1em;
+}
 
-        <div class="card">
-            <p><strong><a href="https://github.com/rangusaisriraj/Hotel_Booking_SQL_Project" target="_blank">Hotel Booking Analysis (SQL)</a></strong></p>
-            <p>Exploratory SQL project analyzing hotel booking trends, customer behavior, and revenue drivers.</p>
-        </div>
-    </section>
+.profile-info .btn {
+    align-self: flex-start;
+}
 
-    <section id="certifications">
-        <h2>🎖️ Certifications</h2>
-        <p><em>Click on each certification to view the certificate.</em></p>
-        <div class="card">
-            <ul>
-                <li><a href="images/certificates/aws-certificate.png" target="_blank">AWS Certificate</a></li>
-                <li><a href="images/certificates/aws-sme.pdf" target="_blank">AWS SME Certification</a></li>
-                <li><a href="images/certificates/microsoft-certification.jpg" target="_blank">Microsoft Technology Certification</a></li>
-                <li><a href="images/certificates/sql-by-amazon.pdf" target="_blank">SQL Certification by Amazon</a></li>
-                <li><a href="images/certificates/sql-data-reporting-analysis.pdf" target="_blank">SQL Data Reporting and Analysis Certification</a></li>
-                <li><a href="images/certificates/tableau-university-california.pdf" target="_blank">Tableau Certification by University of California</a></li>
-            </ul>
-        </div>
-    </section>
+.navbar {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #ffffff, #f0f4f8);
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
 
-    <section id="education">
-        <h2>🎓 Education</h2>
-        <div class="card">
-            <p><strong>MS in Information Systems</strong> - Trine University, Detroit, MI (Dec 2025) | GPA: 3.5/4.0</p>
-            <p><strong>MBA in Business Analytics</strong> - Liverpool Business School, UK (Dec 2023) | GPA: 3.5/4.0</p>
-            <p><strong>B.Tech in Computer Science Engineering</strong> - CMR Technical Campus, India (Jun 2018) | GPA: 3.45/4.0</p>
-        </div>
-    </section>
+.navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
 
-    <section id="youtube">
-        <h2>📺 YouTube Channel: Data Engineering & SQL Tutorials</h2>
-        <div class="card">
-            <p>I run a YouTube channel where I post tutorials on:</p>
-            <ul>
-                <li>✅ SQL Core Concepts</li>
-                <li>✅ Data Engineering Workflows</li>
-                <li>✅ ETL, Reporting, and Analytics Demos</li>
-                <li>✅ Business Analysis Tips</li>
-            </ul>
-            <p>My goal is to simplify data concepts and help beginners and professionals grow their skills.</p>
-            <a class="btn" href="https://www.youtube.com/@rangusaisriraj" target="_blank">👉 Visit My YouTube Channel</a>
-        </div>
-    </section>
+.navbar a:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-decoration: underline;
+}
 
-    <section id="contact">
-        <h2>📬 Contact</h2>
-        <div class="card">
-            <p>Email: <a href="mailto:rangusaisriraj@gmail.com">rangusaisriraj@gmail.com</a></p>
-            <p>Phone: +1 (313) 257-0796</p>
-            <p>GitHub: <a href="https://github.com/rangusaisriraj" target="_blank">github.com/rangusaisriraj</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/saisrirajrangu/" target="_blank">linkedin.com/in/saisrirajrangu/</a></p>
-        </div>
-    </section>
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-</div>
+h2 {
+    color: var(--section-title);
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+}
 
-<footer>
-    © 2025 Sai Sri Raj Rangu | Built with SQL, Power BI, Coffee ☕ & Late Nights 🌙
-</footer>
+.card {
+    background-color: var(--card-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+    padding: 25px;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
 
-<!-- ✅ Google Analytics (replace YOUR-GA-ID later) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'YOUR-GA-ID');
-</script>
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-<script src="js/script.js"></script>
-</body>
-</html>
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    font-size: 0.95em;
+}
+
+/* Work Experience with Image */
+.experience-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.experience-details {
+    flex: 1 1 60%;
+}
+
+.experience-image {
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.experience-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Amazon Extras (Gallery + Awards side by side) */
+#amazon-extras {
+    margin-top: 40px;
+}
+
+.amazon-extras-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.amazon-extras-card {
+    flex: 1 1 45%;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.amazon-extras-card h3 {
+    font-size: 1.5em;
+    color: var(--section-title);
+    margin-bottom: 10px;
+}
+
+.amazon-extras-card p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.amazon-extras-card ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.amazon-extras-card ul li {
+    margin-bottom: 6px;
+}
+
+/* Gallery Grid (for gallery.html and awards.html) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-videos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-videos video {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ NEW: YouTube Section Style */
+#youtube h2 {
+    color: var(--section-title);
+    margin-bottom: 15px;
+}
+
+#youtube .card ul li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+    padding-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-info {
+        align-items: center;
+        text-align: center;
+    }
+    .profile-info .btn {
+        align-self: center;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 8px;
+    }
+    .experience-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .experience-image {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .experience-image img {
+        width: 150px;
+        height: 150px;
+    }
+    .gallery-videos {
+        flex-direction: column;
+    }
+    .amazon-extras-container {
+        flex-direction: column;
+    }
+}
