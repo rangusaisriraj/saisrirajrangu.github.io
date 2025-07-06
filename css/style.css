@@ -1,15 +1,46 @@
 /* ============================== */
-/* 🎨 COLOR & THEME VARIABLES */
+/* 🌟 COLOR THEMES */
 /* ============================== */
+
+/* Light Mode */
 :root {
     --bg-gradient-start: #f5f7fa;
-    --bg-gradient-end: #e8edf3;
+    --bg-gradient-end: #ffffff;
     --card-color: #ffffff;
     --text-color: #2c3e50;
+    --secondary-text: #607d8b;
     --accent-color: #00bcd4;
     --accent-hover: #0097a7;
     --section-title: #1a252f;
     --footer-bg: #1a252f;
+    --footer-text: #cfd8dc;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-gradient-start: #121212;
+    --bg-gradient-end: #1e1e1e;
+    --card-color: #1c1c1c;
+    --text-color: #f1f1f1;
+    --secondary-text: #b0bec5;
+    --accent-color: #00bcd4;
+    --accent-hover: #00acc1;
+    --section-title: #ffffff;
+    --footer-bg: #121212;
+    --footer-text: #9e9e9e;
+}
+
+/* Tech Blue Mode */
+.tech-mode {
+    --bg-gradient-start: #e0f7fa;
+    --bg-gradient-end: #ffffff;
+    --card-color: #ffffff;
+    --text-color: #263238;
+    --secondary-text: #4a5a6a;
+    --accent-color: #1c92d2;
+    --accent-hover: #0077a6;
+    --section-title: #0d47a1;
+    --footer-bg: #0d47a1;
     --footer-text: #cfd8dc;
 }
 
@@ -29,21 +60,29 @@ body {
     line-height: 1.8;
 }
 
-h1, h2, h3 {
+/* ============================== */
+/* 📝 TYPOGRAPHY */
+/* ============================== */
+h1 {
     font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
     color: var(--section-title);
-    margin-bottom: 12px;
+    margin: 0 0 10px 0;
 }
 
 h2 {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 2.2em;
+    color: var(--section-title);
     border-bottom: 3px solid var(--accent-color);
     padding-bottom: 10px;
     margin-bottom: 30px;
 }
 
 h3 {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 1.6em;
+    color: var(--section-title);
     margin-bottom: 15px;
 }
 
@@ -51,7 +90,7 @@ p {
     font-size: 1.1em;
     margin-bottom: 12px;
     line-height: 1.7;
-    color: #4a5a6a;
+    color: var(--secondary-text);
 }
 
 a {
@@ -65,7 +104,7 @@ a:hover {
 }
 
 /* ============================== */
-/* 📑 CARDS & LAYOUT */
+/* 📑 LAYOUT & CARDS */
 /* ============================== */
 .container {
     max-width: 1100px;
@@ -79,6 +118,14 @@ a:hover {
     box-shadow: 0 12px 24px rgba(0,0,0,0.06);
     padding: 28px;
     margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ============================== */
@@ -99,13 +146,6 @@ header {
     gap: 40px;
     max-width: 1100px;
     margin: 0 auto;
-}
-
-header::after {
-    content: "";
-    display: block;
-    height: 20px;
-    background: linear-gradient(to bottom, rgba(26, 37, 47, 1), rgba(26, 37, 47, 0));
 }
 
 .profile-image img {
@@ -130,22 +170,16 @@ header::after {
     display: flex;
     flex-direction: column;
     gap: 12px;
-}
-
-.profile-info h1 {
-    margin: 0;
-    font-size: 3em;
+    text-align: center;
 }
 
 .profile-info p {
     margin: 4px 0;
     font-size: 1.15em;
-    color: #b0bec5;
+    color: var(--secondary-text);
 }
 
-/* ============================== */
-/* ✅ Resume Button Centering */
-/* ============================== */
+/* Resume Button */
 .button-container {
     text-align: center;
     margin-top: 20px;
@@ -161,20 +195,10 @@ header::after {
     border-radius: 8px;
     margin-top: 12px;
     transition: background-color 0.3s ease;
-    gap: 8px; /* spacing between icon and text */
-    font-size: 1em;
+    gap: 8px;
 }
 
 .btn:hover {
-    background-color: var(--accent-hover);
-}
-
-/* Amazon buttons (reuse btn styles) */
-.amazon-btn {
-    background-color: var(--accent-color);
-}
-
-.amazon-btn:hover {
     background-color: var(--accent-hover);
 }
 
@@ -206,7 +230,7 @@ header::after {
 }
 
 /* ============================== */
-/* 💼 WORK EXPERIENCE SECTION */
+/* 💼 WORK EXPERIENCE */
 /* ============================== */
 .experience-container {
     display: flex;
@@ -246,11 +270,6 @@ header::after {
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.experience-image img:hover {
-    transform: scale(1.06);
 }
 
 /* ============================== */
@@ -279,7 +298,7 @@ header::after {
 }
 
 /* ============================== */
-/* 📊 PROJECTS, CERTIFICATIONS, EDUCATION, YOUTUBE */
+/* 📊 OTHER SECTIONS */
 /* ============================== */
 section p, section ul {
     font-size: 1.05em;
@@ -295,33 +314,10 @@ section ul li {
     margin-bottom: 10px;
 }
 
-/* YouTube list style */
+/* YouTube list */
 #youtube .card ul li {
     list-style-type: disc;
     padding-left: 5px;
-}
-
-/* ============================== */
-/* 📷 GALLERY */
-/* ============================== */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.gallery-grid img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.gallery-grid img:hover {
-    transform: scale(1.05);
 }
 
 /* ============================== */
