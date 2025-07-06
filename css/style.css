@@ -144,6 +144,41 @@ header::after {
 }
 
 /* ============================== */
+/* ✅ Resume Button Centering */
+/* ============================== */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 26px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-radius: 8px;
+    margin-top: 12px;
+    transition: background-color 0.3s ease;
+    gap: 8px; /* spacing between icon and text */
+    font-size: 1em;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Amazon buttons (reuse btn styles) */
+.amazon-btn {
+    background-color: var(--accent-color);
+}
+
+.amazon-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* ============================== */
 /* 🔗 NAVBAR */
 /* ============================== */
 .navbar {
@@ -264,32 +299,6 @@ section ul li {
 #youtube .card ul li {
     list-style-type: disc;
     padding-left: 5px;
-}
-
-/* ============================== */
-/* 🔘 BUTTONS */
-/* ============================== */
-.btn {
-    display: inline-block;
-    padding: 12px 26px;
-    background-color: var(--accent-color);
-    color: #ffffff;
-    border-radius: 8px;
-    margin-top: 12px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: var(--accent-hover);
-}
-
-/* Amazon buttons */
-.amazon-btn {
-    background-color: var(--accent-color);
-}
-
-.amazon-btn:hover {
-    background-color: var(--accent-hover);
 }
 
 /* ============================== */
