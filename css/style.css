@@ -1,37 +1,5 @@
-/* ============================== */
-/* 🌟 COLOR THEMES */
-/* ============================== */
 
-/* Light Mode */
 :root {
-    --bg-gradient-start: #f5f7fa;
-    --bg-gradient-end: #ffffff;
-    --card-color: #ffffff;
-    --text-color: #2c3e50;
-    --secondary-text: #607d8b;
-    --accent-color: #00bcd4;
-    --accent-hover: #0097a7;
-    --section-title: #1a252f;
-    --footer-bg: #1a252f;
-    --footer-text: #cfd8dc;
-}
-
-/* Dark Mode */
-.dark-mode {
-    --bg-gradient-start: #121212;
-    --bg-gradient-end: #1e1e1e;
-    --card-color: #1c1c1c;
-    --text-color: #f1f1f1;
-    --secondary-text: #b0bec5;
-    --accent-color: #00bcd4;
-    --accent-hover: #00acc1;
-    --section-title: #ffffff;
-    --footer-bg: #121212;
-    --footer-text: #9e9e9e;
-}
-
-/* Tech Blue Mode */
-.tech-mode {
     --bg-gradient-start: #e0f7fa;
     --bg-gradient-end: #ffffff;
     --card-color: #ffffff;
@@ -43,6 +11,7 @@
     --footer-bg: #0d47a1;
     --footer-text: #cfd8dc;
 }
+
 
 /* ============================== */
 /* 🔗 GLOBAL STYLES */
